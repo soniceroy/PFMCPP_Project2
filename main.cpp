@@ -59,11 +59,42 @@ video: Chapter 2 - Part 3
 void variableDeclarations()
 {
     //example:
-    int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
-    
+    // int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
+    int amount = 10;
+    int length = 40;
+    int count = 50;
+    bool isHappy = true;
+    bool isOn = false;
+    bool hasSupper = false;
+    char ess = 's';
+    char vee = 'v';
+    char tee = 't';
+    float oneAndABit = 1.03;
+    float seven = 7.0;
+    float eightAndAHalf = 8.5;
+    double lotsOfDecimals = 0.00000000000349;
+    double lessDecimals = 0.0000349;
+    double zero = 0.0;
 
     
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    // ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    ignoreUnused(
+      amount,
+      length,
+      count,
+      isHappy,
+      isOn,
+      hasSupper,
+      ess,
+      vee,
+      tee,
+      oneAndABit,
+      seven,
+      eightAndAHalf,
+      lotsOfDecimals,
+      lessDecimals,
+      zero
+    );
 }
 
 /*
@@ -71,32 +102,50 @@ void variableDeclarations()
  example:
  note: this example shows the result after completing steps 3-8
  */
-bool rentACar(int rentalDuration, int carType = 0)  //function declaration with random number of arguments, arbitrary number of arguments have default value
-{ 
-    ignoreUnused(rentalDuration, carType); //passing each function parameter to the ignoreUnused() function
-    return {}; //if your function returns something other than void, add 'return {};' at the end of it.
-} 
+// bool rentACar(int rentalDuration, int carType = 0)  //function declaration with random number of arguments, arbitrary number of arguments have default value
+// { 
+//     ignoreUnused(rentalDuration, carType); //passing each function parameter to the ignoreUnused() function
+//     return {}; //if your function returns something other than void, add 'return {};' at the end of it.
+// } 
 
 /*
  1)
  */
-
+void sendSignal(int* signalArray, int signalArrayLength)
+{
+  ignoreUnused(signalArray, signalArrayLength);
+}
 /*
  2)
  */
-
+char* changeFirstLetter(char* word, char newLetter)
+{
+  ignoreUnused(word, newLetter);
+  return {};
+}
 /*
  3)
  */
-
+int placePizzaOrder(int size, int* toppings)
+{
+  ignoreUnused(size, toppings);
+  return {};
+}
 /*
  4)
  */
-
+int getOrderStatus(int orderID)
+{
+  ignoreUnused(orderID);
+  return {};
+}
 /*
  5)
  */
-
+void playSound(int soundID, float duration)
+{
+  ignoreUnused(soundID, duration);
+}
 /*
  6)
  */
