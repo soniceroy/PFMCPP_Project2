@@ -149,23 +149,39 @@ void playSound(int soundID, float duration)
 /*
  6)
  */
-
+void launchProjectile(int distance, int projectileID)
+{
+  ignoreUnused(distance, projectileID);
+}
 /*
  7)
  */
-
+void run(int speed)
+{
+  ignoreUnused(speed);
+}
 /*
  8)
  */
-
+int createNote(char * text)
+{
+  ignoreUnused(text);
+  return {};
+}
 /*
  9)
  */
-
+void liftArm(float height)
+{
+  ignoreUnused(height);
+}
 /*
  10)
  */
-
+void changeOrderStatus(int orderStatus, int orderID)
+{
+  ignoreUnused(orderStatus, orderID);
+}
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
 
@@ -183,30 +199,36 @@ void playSound(int soundID, float duration)
 int main()
 {
     //example of calling that function, storing the value, and passing it to ignoreUnused at the end of main()
-    auto carRented = rentACar(6, 2); 
+    // auto carRented = rentACar(6, 2); 
     
     //1)
-    
+    int signalArray[] = {1,2,3};
+    sendSignal(signalArray, 3);
     //2)
-    
+    char oldWord[] = {'d', 'o', 'g'};
+    auto newWord = changeFirstLetter(oldWord, "l");
     //3)
-    
+    int placePizzaOrder(int size, int* toppings)
     //4)
-    
+    int getOrderStatus(int orderID)
     //5)
-    
+    void playSound(int soundID, float duration)
     //6)
-    
+    void launchProjectile(int distance, int projectileID)
     //7)
-    
+    void run(int speed)
     //8)
-    
+    int createNote(char * text)
     //9)
-    
+    void liftArm(float height)
     //10)
+    void changeOrderStatus(int orderStatus, int orderID)
     
-    
-    ignoreUnused(carRented);
+    // ignoreUnused(carRented);
+    ignoreUnused(
+      signalArray,
+
+    )
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
