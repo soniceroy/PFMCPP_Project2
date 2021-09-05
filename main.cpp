@@ -79,21 +79,21 @@ void variableDeclarations()
     
     // ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
     ignoreUnused(
-      amount,
-      length,
-      count,
-      isHappy,
-      isOn,
-      hasSupper,
-      ess,
-      vee,
-      tee,
-      oneAndABit,
-      seven,
-      eightAndAHalf,
-      lotsOfDecimals,
-      lessDecimals,
-      zero
+        amount,
+        length,
+        count,
+        isHappy,
+        isOn,
+        hasSupper,
+        ess,
+        vee,
+        tee,
+        oneAndABit,
+        seven,
+        eightAndAHalf,
+        lotsOfDecimals,
+        lessDecimals,
+        zero
     );
 }
 
@@ -113,15 +113,15 @@ void variableDeclarations()
  */
 void sendSignal(int* signalArray, int signalArrayLength)
 {
-  ignoreUnused(signalArray, signalArrayLength);
+    ignoreUnused(signalArray, signalArrayLength);
 }
 /*
  2)
  */
 char* changeFirstLetter(char* word, char newLetter)
 {
-  ignoreUnused(word, newLetter);
-  return {};
+    ignoreUnused(word, newLetter);
+    return {};
 }
 /*
  3)
@@ -136,51 +136,51 @@ int placePizzaOrder(int size, int* toppings)
  */
 int getOrderStatus(int orderID)
 {
-  ignoreUnused(orderID);
-  return {};
+    ignoreUnused(orderID);
+    return {};
 }
 /*
  5)
  */
 void playSound(int soundID, float duration)
 {
-  ignoreUnused(soundID, duration);
+    ignoreUnused(soundID, duration);
 }
 /*
  6)
  */
 void launchProjectile(int distance, int projectileID)
 {
-  ignoreUnused(distance, projectileID);
+    ignoreUnused(distance, projectileID);
 }
 /*
  7)
  */
 void run(int speed)
 {
-  ignoreUnused(speed);
+    ignoreUnused(speed);
 }
 /*
  8)
  */
 int createNote(char * text)
 {
-  ignoreUnused(text);
-  return {};
+    ignoreUnused(text);
+    return {};
 }
 /*
  9)
  */
 void liftArm(float height)
 {
-  ignoreUnused(height);
+    ignoreUnused(height);
 }
 /*
  10)
  */
 void changeOrderStatus(int orderStatus, int orderID)
 {
-  ignoreUnused(orderStatus, orderID);
+    ignoreUnused(orderStatus, orderID);
 }
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
@@ -202,33 +202,41 @@ int main()
     // auto carRented = rentACar(6, 2); 
     
     //1)
-    int signalArray[] = {1,2,3};
+    int signalArray[] = {1, 2, 3};
     sendSignal(signalArray, 3);
     //2)
-    char oldWord[] = {'d', 'o', 'g'};
-    auto newWord = changeFirstLetter(oldWord, "l");
+    char dog[] = "dog";
+    auto log = changeFirstLetter(dog, 'l');
     //3)
-    int placePizzaOrder(int size, int* toppings)
+    int toppings[] = {1, 2, 3};
+    auto orderID = placePizzaOrder(1, toppings);
     //4)
-    int getOrderStatus(int orderID)
+    auto orderStatus = getOrderStatus(orderID);
     //5)
-    void playSound(int soundID, float duration)
+    playSound(1, 1.1);
     //6)
-    void launchProjectile(int distance, int projectileID)
+    launchProjectile(40, 0);
     //7)
-    void run(int speed)
+    run(100);
     //8)
-    int createNote(char * text)
+    char text[] = "Hello World.";
+    auto note = createNote(text);
     //9)
-    void liftArm(float height)
+    liftArm(12.2);
     //10)
-    void changeOrderStatus(int orderStatus, int orderID)
+    changeOrderStatus(3, orderID);
     
     // ignoreUnused(carRented);
     ignoreUnused(
-      signalArray,
-
-    )
+        signalArray,
+        dog,
+        log,
+        toppings,
+        orderID,
+        orderStatus,
+        text,
+        note
+    );
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
