@@ -111,9 +111,9 @@ void variableDeclarations()
 /*
  1)
  */
-void sendSignal(int* signalArray, int signalArrayLength)
+void sendSignal(int signal)
 {
-    ignoreUnused(signalArray, signalArrayLength);
+    ignoreUnused(signal);
 }
 /*
  2)
@@ -202,8 +202,7 @@ int main()
     // auto carRented = rentACar(6, 2); 
     
     //1)
-    int signalArray[] = {1, 2, 3};
-    sendSignal(signalArray, 3);
+    sendSignal(3);
     //2)
     char dog[] = "dog";
     auto log = changeFirstLetter(dog, 'l');
@@ -228,7 +227,6 @@ int main()
     
     // ignoreUnused(carRented);
     ignoreUnused(
-        signalArray,
         dog,
         log,
         toppings,
