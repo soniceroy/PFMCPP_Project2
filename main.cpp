@@ -118,10 +118,9 @@ void sendSignal(int signal)
 /*
  2)
  */
-char* changeFirstLetter(char* word, char newLetter)
+void chargeCard(int cardNumber, float amount)
 {
-    ignoreUnused(word, newLetter);
-    return {};
+    ignoreUnused(cardNumber, amount);
 }
 /*
  3)
@@ -204,8 +203,7 @@ int main()
     //1)
     sendSignal(3);
     //2)
-    char dog[] = "dog";
-    auto log = changeFirstLetter(dog, 'l');
+    chargeCard(123456, 12.34f);
     //3)
     int toppings[] = {1, 2, 3};
     auto orderID = placePizzaOrder(1, toppings);
@@ -227,8 +225,6 @@ int main()
     
     // ignoreUnused(carRented);
     ignoreUnused(
-        dog,
-        log,
         toppings,
         orderID,
         orderStatus,
