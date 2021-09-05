@@ -16,10 +16,11 @@ video: Chapter 2 - Part 3
  
  1) Write down the names of the 6 major primitive types available in C++  here:
  
- 
- 
- 
- 
+ bool
+ char
+ int
+ float
+ double
  
  
  
@@ -58,11 +59,42 @@ video: Chapter 2 - Part 3
 void variableDeclarations()
 {
     //example:
-    int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
-    
+    // int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
+    int amount = 10;
+    int length = 40;
+    int count = 50;
+    bool isHappy = true;
+    bool isOn = false;
+    bool hasSupper = false;
+    char ess = 's';
+    char vee = 'v';
+    char tee = 't';
+    float oneAndABit = 1.03f;
+    float seven = 7.0f;
+    float eightAndAHalf = 8.5f;
+    double lotsOfDecimals = 0.00000000000349;
+    double lessDecimals = 0.0000349;
+    double zero = 0.0;
 
     
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    // ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    ignoreUnused(
+        amount,
+        length,
+        count,
+        isHappy,
+        isOn,
+        hasSupper,
+        ess,
+        vee,
+        tee,
+        oneAndABit,
+        seven,
+        eightAndAHalf,
+        lotsOfDecimals,
+        lessDecimals,
+        zero
+    );
 }
 
 /*
@@ -70,52 +102,85 @@ void variableDeclarations()
  example:
  note: this example shows the result after completing steps 3-8
  */
-bool rentACar(int rentalDuration, int carType = 0)  //function declaration with random number of arguments, arbitrary number of arguments have default value
-{ 
-    ignoreUnused(rentalDuration, carType); //passing each function parameter to the ignoreUnused() function
-    return {}; //if your function returns something other than void, add 'return {};' at the end of it.
-} 
+// bool rentACar(int rentalDuration, int carType = 0)  //function declaration with random number of arguments, arbitrary number of arguments have default value
+// { 
+//     ignoreUnused(rentalDuration, carType); //passing each function parameter to the ignoreUnused() function
+//     return {}; //if your function returns something other than void, add 'return {};' at the end of it.
+// } 
 
 /*
  1)
  */
-
+void sendSignal(int signal)
+{
+    ignoreUnused(signal);
+}
 /*
  2)
  */
-
+void chargeCard(int cardNumber, float amount)
+{
+    ignoreUnused(cardNumber, amount);
+}
 /*
  3)
  */
-
+int placePizzaOrder(int size, int type)
+{
+    ignoreUnused(size, type);
+    return {};
+}
 /*
  4)
  */
-
+int getOrderStatus(int orderID)
+{
+    ignoreUnused(orderID);
+    return {};
+}
 /*
  5)
  */
-
+void playSound(int soundID, float duration)
+{
+    ignoreUnused(soundID, duration);
+}
 /*
  6)
  */
-
+void launchProjectile(int distance, int projectileID)
+{
+    ignoreUnused(distance, projectileID);
+}
 /*
  7)
  */
-
+void run(int speed)
+{
+    ignoreUnused(speed);
+}
 /*
  8)
  */
-
+int soundMidiNote(int noteID, int velocity)
+{
+    ignoreUnused(noteID, velocity);
+    return {};
+}
 /*
  9)
  */
-
+void liftArm(float height)
+{
+    ignoreUnused(height);
+}
 /*
  10)
  */
-
+void changeOrderStatus(int orderStatus, int orderID)
+{
+    ignoreUnused(orderStatus, orderID);
+}
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
 
@@ -133,30 +198,35 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 int main()
 {
     //example of calling that function, storing the value, and passing it to ignoreUnused at the end of main()
-    auto carRented = rentACar(6, 2); 
+    // auto carRented = rentACar(6, 2); 
     
     //1)
-    
+    sendSignal(3);
     //2)
-    
+    chargeCard(123456, 12.34f);
     //3)
-    
+    auto orderID = placePizzaOrder(1, 14);
     //4)
-    
+    auto orderStatus = getOrderStatus(orderID);
     //5)
-    
+    playSound(1, 1.1f);
     //6)
-    
+    launchProjectile(40, 0);
     //7)
-    
+    run(100);
     //8)
-    
+    auto note = soundMidiNote(1, 127);
     //9)
-    
+    liftArm(12.2f);
     //10)
+    changeOrderStatus(3, orderID);
     
-    
-    ignoreUnused(carRented);
+    // ignoreUnused(carRented);
+    ignoreUnused(
+        orderID,
+        orderStatus,
+        note
+    );
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
