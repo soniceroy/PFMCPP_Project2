@@ -127,8 +127,8 @@ void chargeCard(int cardNumber, float amount)
  */
 int placePizzaOrder(int size, int type)
 {
-  ignoreUnused(size, type);
-  return {};
+    ignoreUnused(size, type);
+    return {};
 }
 /*
  4)
