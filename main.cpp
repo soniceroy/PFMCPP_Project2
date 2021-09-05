@@ -69,9 +69,9 @@ void variableDeclarations()
     char ess = 's';
     char vee = 'v';
     char tee = 't';
-    float oneAndABit = 1.03;
-    float seven = 7.0;
-    float eightAndAHalf = 8.5;
+    float oneAndABit = 1.03f;
+    float seven = 7.0f;
+    float eightAndAHalf = 8.5f;
     double lotsOfDecimals = 0.00000000000349;
     double lessDecimals = 0.0000349;
     double zero = 0.0;
@@ -213,7 +213,7 @@ int main()
     //4)
     auto orderStatus = getOrderStatus(orderID);
     //5)
-    playSound(1, 1.1);
+    playSound(1, 1.1f);
     //6)
     launchProjectile(40, 0);
     //7)
@@ -222,7 +222,7 @@ int main()
     char text[] = "Hello World.";
     auto note = createNote(text);
     //9)
-    liftArm(12.2);
+    liftArm(12.2f);
     //10)
     changeOrderStatus(3, orderID);
     
