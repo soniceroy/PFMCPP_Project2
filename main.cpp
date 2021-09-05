@@ -125,9 +125,9 @@ void chargeCard(int cardNumber, float amount)
 /*
  3)
  */
-int placePizzaOrder(int size, int* toppings)
+int placePizzaOrder(int size, int type)
 {
-  ignoreUnused(size, toppings);
+  ignoreUnused(size, type);
   return {};
 }
 /*
@@ -205,8 +205,7 @@ int main()
     //2)
     chargeCard(123456, 12.34f);
     //3)
-    int toppings[] = {1, 2, 3};
-    auto orderID = placePizzaOrder(1, toppings);
+    auto orderID = placePizzaOrder(1, 14);
     //4)
     auto orderStatus = getOrderStatus(orderID);
     //5)
@@ -225,7 +224,6 @@ int main()
     
     // ignoreUnused(carRented);
     ignoreUnused(
-        toppings,
         orderID,
         orderStatus,
         text,
