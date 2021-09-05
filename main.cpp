@@ -162,9 +162,9 @@ void run(int speed)
 /*
  8)
  */
-int createNote(char * text)
+int soundMidiNote(int noteID, int velocity)
 {
-    ignoreUnused(text);
+    ignoreUnused(noteID, velocity);
     return {};
 }
 /*
@@ -215,8 +215,7 @@ int main()
     //7)
     run(100);
     //8)
-    char text[] = "Hello World.";
-    auto note = createNote(text);
+    auto note = soundMidiNote(1, 127);
     //9)
     liftArm(12.2f);
     //10)
@@ -226,7 +225,6 @@ int main()
     ignoreUnused(
         orderID,
         orderStatus,
-        text,
         note
     );
     std::cout << "good to go!" << std::endl;
